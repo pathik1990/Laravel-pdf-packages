@@ -1,0 +1,117 @@
+.alert {
+    font-size: 14px;
+}
+
+.copy-click {
+    position: relative;
+    padding-bottom: 2px;
+    text-decoration: none;
+    cursor: copy;
+    color: #484848;
+    border-bottom: 1px dashed #767676;
+    transition: background-color calc(var(--duration) * 2) var(--ease);
+}
+
+.copy-click:after {
+    content: attr(data-tooltip-text);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    padding: 8px 16px;
+    white-space: nowrap;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 0 -12px rgba(0, 0, 0, 0);
+    pointer-events: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translate(-50%, 12px);
+    transform: translate(-50%, 12px);
+    transition: box-shadow calc(var(--duration) / 1.5) var(--bounce), opacity calc(var(--duration) / 1.5) var(--bounce), -webkit-transform calc(var(--duration) / 1.5) var(--bounce);
+    transition: box-shadow calc(var(--duration) / 1.5) var(--bounce), opacity calc(var(--duration) / 1.5) var(--bounce), transform calc(var(--duration) / 1.5) var(--bounce);
+    transition: box-shadow calc(var(--duration) / 1.5) var(--bounce), opacity calc(var(--duration) / 1.5) var(--bounce), transform calc(var(--duration) / 1.5) var(--bounce), -webkit-transform calc(var(--duration) / 1.5) var(--bounce);
+}
+
+.copy-click.is-hovered:after {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    transition-timing-function: var(--ease);
+}
+
+.copy-click.is-copied {
+    background-color: yellow;
+}
+
+.copy-click.is-copied:after {
+    content: attr(data-tooltip-text-copied);
+}
+
+.range_price .irs--round .irs-single {
+    padding: 10px 20px;
+    top: -15px;
+}
+
+.cart_body {
+    background: #dee4ec;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cart_total {
+    padding: 10px;
+    margin-top: 10px;
+    border-top: dotted 4px;
+}
+
+span.cart_total_label {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+span.cart_total_price.pull-right {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+span.switcher_text1 {
+    padding-right: 10px;
+    color: orange;
+}
+
+button.btn.paypal_pay img {
+    width: 25px;
+}
+
+button.btn.paypal_pay {
+    background: #006cfa;
+    color: #fff;
+    margin-top: 20px;
+}
+
+span.switcher_text2 {
+    padding-left: 10px;
+    color: #28a745;
+}
+
+.paypal_live {
+    display: none;
+}
+
+.head_title {
+    font-weight: 700;
+}
+.cr_date {
+    color: darkgoldenrod;
+}
+.head_cls {
+    display: flex;
+    justify-content: space-between;
+}
+.mark_all_read {
+    /* text-align: center; */
+    border-top: 1px solid #cecece;
+    padding-top: 15px;
+}
